@@ -6,9 +6,29 @@ import { myLogo, menu, close } from "../assets";
 const Navbar = () => {
   const [active, setactive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${
+        styles.paddingX
+      } w-full flex items-center py-5 fixed top-0 z-20 ${
+        scrolled ? "bg-primary" : "bg-transparent"
+      }`}
     >
       <div className="w-full flex items-center justify-between max-w-7xl mx-auto">
         <Link
@@ -19,7 +39,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={myLogo} alt="logo" className="w-9 h-9 object contain" />
+          <img src={myLogo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] flex text-blod font-bold cursor-pointer">
             Hasan &nbsp; <span className="sm:block hidden">Balleh</span>
           </p>
