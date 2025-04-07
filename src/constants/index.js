@@ -18,6 +18,8 @@ import {
   profound,
   gpt,
   memories,
+  naseem,
+  photograoher,
 } from "../assets";
 
 export const navLinks = [
@@ -121,7 +123,7 @@ const experiences = [
     company_name: "profound",
     icon: profound,
     iconBg: "#383E56",
-    date: "Oct 2023 - Apr 2023",
+    date: "Oct 2022 - Apr 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -132,23 +134,40 @@ const experiences = [
 ];
 const projects = [
   {
-    name: "Gpt3",
+    name: "Naseem Mussafah",
     description:
-      "Web application that talks about artificial intelligence, its importance, the dazzling future, and many of its features.",
+      " Built a responsive website for Abu Dhabi-based car repair services, enhancing local business visibility and client engagement through SEO",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: naseem,
+    source_code_link: "https://github.com/hassanballeh/Nassem",
+  },
+  {
+    name: "Photographer",
+    description:
+      "Created a photography booking website enabling clients to schedule sessions, preview portfolios, and securely receive their photos—enhancing engagement for photographers and customers.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
-
       {
-        name: "Css",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: gpt,
-    source_code_link: "https://github.com/hassanballeh/gpt-3",
+    image: photograoher,
+    source_code_link: "https://github.com/hassanballeh/photographer",
   },
+
   {
     name: "Memories",
     description:
@@ -169,6 +188,24 @@ const projects = [
     ],
     image: memories,
     source_code_link: "https://github.com/hassanballeh/Memories-back",
+  },
+  {
+    name: "Gpt3",
+    description:
+      "Web application that talks about artificial intelligence, its importance, the dazzling future, and many of its features.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+
+      {
+        name: "Css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: gpt,
+    source_code_link: "https://github.com/hassanballeh/gpt-3",
   },
 ];
 

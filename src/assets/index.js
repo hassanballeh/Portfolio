@@ -34,6 +34,8 @@ import tripguide from "./tripguide.png";
 import profound from "./tech/profound.png";
 import gpt from "./gpt.png";
 import memories from "./memories.png";
+import naseem from "./naseem.png";
+import photograoher from "./photograoher.jpg";
 
 export {
   logo,
@@ -72,4 +74,6 @@ export {
   gpt,
   memories,
   myLogoBlack,
+  naseem,
+  photograoher,
 };
